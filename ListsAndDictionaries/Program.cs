@@ -93,20 +93,98 @@ namespace ListsAndDictionaries
             //removeAt
             //Insert
 
-            numberList.RemoveAt(0);
-            for (int number = 0; number < numberList.Count; number++)
-            {
-                Console.WriteLine(numberList[number]);
-            }
-            numberList.Insert(0, 63);
-            for (int number = 0; number < numberList.Count; number++)
-            {
-                Console.WriteLine(numberList[number]);
-            }
-                    
+            //numberList.RemoveAt(0);
+            //for (int number = 0; number < numberList.Count; number++)
+            //{
+            //    Console.WriteLine(numberList[number]);
+            //}
+            //numberList.Insert(0, 63);
+            //for (int number = 0; number < numberList.Count; number++)
+            //{
+            //    Console.WriteLine(numberList[number]);
+            //}
 
+            //lists - a collection of elements of the same type with a mutable number of elements
+            //array - a collection of elements of the same type witha set number - immutable
+            //dictionary - a data collection of key/value pairs - all keys are same data type, all values are same data type
+            //each key is a unique identifier, values do not have to be unique.
+
+            //Dictionary<int, string> coatCheck = new Dictionary<int, string>()
+            //{
+            //    { 23,"Yellow Jacket"},
+            //    {24, "Black Leather Coat" },
+            //    {3, "Blue Blazer" },
+            //    {15, "White Trench" },
+            //    {56, "Purple Poncho" },
+            //    {68, "Brown Tweed" },
+            //    {77, "Windbreaker" },
+            //    {52, "Sweater" },
+            //    {14, "Jean Jacket" }
+            //};
+
+            //foreach loop to print out all the coats. Keyword KeyValuePair used
+            //foreach (KeyValuePair<int,string>coat in coatCheck)
+            //{
+            //    Console.WriteLine(coat);
+            //}
+            //Console.WriteLine(coatCheck.Count); - counts the amount of entries
+
+            //prints only the key
+            //foreach (KeyValuePair<int,string>coat in coatCheck)
+            //{
+            //    Console.WriteLine(coat.Key);
+            //}
+
+            //prints only the value
+            //foreach (KeyValuePair<int, string> coat in coatCheck)
+            //{
+            //    Console.WriteLine(coat.Value);
+            //}
+
+
+            Dictionary<string, string> carValet = new Dictionary<string, string>()
+            {
+                {"Cardona", "Tesla" },
+                {"Jones","Civic" },
+                {"Deming","Challenger"},
+                {"Medina","Escape" },
+                {"Oquendo","Colorado" },
+                {"Searles","Liberty" },
+                {"Sewkaran","C230" },
+                {"Persaud","MKZ" },
+                {"Figueroa","Optima" },
+                {"Rivera","Altima" }
+            };
+            foreach (KeyValuePair<string, string> car in carValet)
+            {
+                Console.WriteLine(car);
             }
+
+            Dictionary<string, int> zooAnimals = new Dictionary<string, int>()
+            {
+                {"Lions", 4 },
+                {"Eagles", 9 },
+                {"Giraffes", 6 },
+                {"Mokeys", 12 },
+                {"Sharks", 5 },
+                {"Tigers", 7 },
+                {"Rhinos", 2 },
+                {"Snakes", 9 },
+                {"Penguins", 14 },
+                {"Flamingos", 6 }
+            };
+            zooAnimals.Remove("Rhinos");
+            Console.WriteLine(zooAnimals.Count);
+            Console.WriteLine("Input an animal");
+            string userAnimal = (Console.ReadLine());
+            
+
+
+
+
+
         }
+    }
     }
     
 
